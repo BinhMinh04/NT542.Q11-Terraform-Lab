@@ -37,8 +37,8 @@ module "web_server" {
 
   ami                         = data.aws_ami.amazon_linux.id
   instance_type               = var.instance_type
-  subnet_id                   = module.vpc.subnet_id["subnet-lab-NT542-Q11"]
-  availability_zone           = var.vpc_subnets["subnet-lab-NT542-Q11"].availability_zone
+  subnet_id                   = module.vpc.subnet_id["subnet-${var.environment}-${var.project_name}"]
+  availability_zone           = var.vpc_subnets["subnet-${var.environment}-${var.project_name}"].availability_zone
   vpc_security_group_ids      = [module.web_security_group.id]
   associate_public_ip_address = true
   key_name                    = aws_key_pair.es.key_name

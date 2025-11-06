@@ -1,5 +1,5 @@
 environment  = "lab"
-project_name = "NT542.Q11"
+project_name = "NT542-Q11"
 
 vpc_cidr_block = "10.25.0.0/16"
 
