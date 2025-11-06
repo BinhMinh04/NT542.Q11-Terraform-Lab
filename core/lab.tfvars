@@ -19,4 +19,3 @@ vpc_subnets = {
 
 # EC2 Configuration
 instance_type = "t3.micro"
-# key_name = "your-key-name"  # Uncomment and set your key pair name

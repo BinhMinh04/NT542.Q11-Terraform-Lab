@@ -28,8 +28,8 @@ module "public_route_table" {
   }
 
   route_table_associations = {
-    for subnet_name, subnet_config in var.vpc_subnets : subnet_name => {
-      subnet_id = module.vpc.subnet_id[subnet_name]
+    "subnet-${var.environment}-${var.project_name}" = {
+      subnet_id = module.vpc.subnet_id["subnet-${var.environment}-${var.project_name}"]
     }
   }
 

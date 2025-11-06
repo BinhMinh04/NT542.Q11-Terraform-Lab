@@ -3,7 +3,6 @@ provider "aws" {
 }
 
 terraform {
-  # Comment out S3 backend for initial testing - uncomment when ready to use remote state
   backend "s3" {
     bucket       = "s3-lab-tfstate"
     key          = "terraform.tfstate"
